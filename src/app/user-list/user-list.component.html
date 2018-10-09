@@ -1,0 +1,10 @@
+<h3>Lista Usuarios</h3>
+<hr />
+ 
+<div *ngFor="let user of users | async" style="width: 300px;">
+  <user-details [user]='user'></user-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-default " (click)='deleteUsers()'>Borrar todo</button>
+</div>

@@ -1,0 +1,21 @@
+<h3>Crear Usuario</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" required="true" [(ngModel)]="user.nombre" name="nombre">
+    </div>
+ 
+    <div class="form-group">
+      <label for="correo">Correo</label>
+      <input type="text" class="form-control" id="correo" required="true" [(ngModel)]="user.correo" name="correo">
+    </div>
+ 
+    <button type="submit" class="btn btn-default">Aceptar</button>
+  </form>
+</div>
+ 
+<div [hidden]="!submitted">
+  <h4>El usuario ha sido agregado a la base de datos.</h4>
+  <button class="btn btn-default" (click)="newUser()">Agregar otro usuario</button>
+</div>

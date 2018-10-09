@@ -1,0 +1,11 @@
+<div *ngIf="user">
+  <div>
+    <label>Nombre: </label> {{user.nombre}}
+  </div>
+  <div>
+    <label>Correo: </label> {{user.correo}}
+  </div>
+
+  <span class="button is-small btn-danger" (click)='deleteUser()'>Eliminar</span>
+  <hr />
+</div>
